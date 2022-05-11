@@ -1,0 +1,28 @@
+<!-- tagname Program -->
+<html>
+<head>
+    
+    <script type="text/javascript">
+        function changeStyling()
+        {
+        let para= document.getElementsByName("p");
+           // para[0].style.fontSize =25;
+           for(var i=0;i<para;i++)
+           {
+               para[i].style.fontSize=22 ;
+           }
+        }
+
+    </script>
+</head>
+<body>
+    <p >This is Paragraph 1</p>
+    <p >This is Paragraph 2</p>
+    <p >This is Paragraph 3</p>
+    <p>This is Paragraph 4</p>
+    <p>This is Paragraph 5</p>
+
+    <br>
+    <button onclick="changeStyling()" >Click Me</button>
+</body>
+</html>

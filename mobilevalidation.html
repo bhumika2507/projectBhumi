@@ -1,0 +1,35 @@
+<!-- Mobile Validation Program -->
+<html>
+<head>
+    
+    <script type="text/javascript">
+
+        function validate()
+        {
+            let text = document.getElementById("text1").value ;
+
+            let regx =/[7-9]\d{9}/;
+            if(regx.test(text))
+            {
+                document.getElementById("lbltext").innerHTML="valid";
+                document.getElementById("lbltext").style.visibility="visible";
+                document.getElementById("lbltext").style.color="green";
+            }
+            else
+            {
+                document.getElementById("lbltext").innerHTML="Invalid";
+                document.getElementById("lbltext").style.visibility="visible";
+                document.getElementById("lbltext").style.color="red";
+            }
+        }
+    </script>
+</head>
+<body>
+    <form >
+        <input id="text1" placeholder="CellPhone " type="text"  /><br>
+        <label id="lbltext" style="color: red; visibility: hidden">Invalid</label>
+        <br>
+       <button  onclick="validate()" type="button">submit</button>
+   </form>
+</body>
+</html>

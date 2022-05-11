@@ -1,0 +1,38 @@
+<!-- Regular Expration Program -->
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+    function validate()
+    {
+        let Username = document.getElementById("uname").value;
+        let regx = /[sdp]imple/i;
+        regx=new RegExp("E00");
+        if(regx .test(Username))
+        {
+            alert("valid Username");
+            document.getElementById("lbluser").style.visibility="hidden" ;
+
+        }
+        else
+        {
+            alert("Invalid Username");
+            document.getElementById("lbluser").style.visibility="visible";
+        }
+    }
+
+    </script>
+</head>
+<body>
+    <form  action="demo.html">
+        <input id="uname" placeholder="Enter Username " type="text"  >
+        <label id="lbluser" style="color: red; visibility: hidden;">Invalid Username</label>
+        <br><br>
+       
+       <button  onclick="validate()" type="button">submit</button>
+   </form>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!-- Class Name Program.... -->
+<html>
+<head>
+    
+    <script type="text/javascript">
+    
+        function changeStyling()
+        {
+            let element = document.getElementsByClassName("mypara");
+            for (let x=0;x<element.length;x++)
+            {
+                element[x].style.color="red" ;
+            }
+        }
+    </script>
+</head>
+<body>
+    <p class="mypara" >This is Paragraph 1</p>
+    <p >This is Paragraph 2</p>
+    <p class="mypara">This is Paragraph 3</p>
+    <p>This is Paragraph 4</p>
+    <p class="mypara">This is Paragraph 5</p>
+
+    <br>
+    <button onclick="changeStyling()" >Click Me</button>
+</body>
+</html>

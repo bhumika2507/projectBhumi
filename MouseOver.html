@@ -1,0 +1,22 @@
+<!-- Mouce over Out Program -->
+<html lang="en">
+<head>
+    
+    <script type="text/javascript">
+
+        function setNewImage()
+        {
+            document.getElementById("img1").src="Desktop/images/hawk.png";
+        }
+
+        function setOldImage()
+        {
+            document.getElementById("img1").src="Desktop/images/logo.png" ;
+        }
+    </script>
+</head>
+<body>
+    <img id="img1" onmouseover="setNewImage()" onmouseout="setOldImage"
+     src="Desktop/images/logo.png" width="300" />
+</body>
+</html>

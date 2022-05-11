@@ -1,0 +1,36 @@
+<!-- timeing funcation Program -->
+
+<html>
+<head>
+    <script type="text/javascript">
+        let ID=0;
+        let Seconds=0;
+        function printMsg()
+        {
+            // document.getElementById("op").innerHTML="5 Seconds have Passed";
+            document.getElementById("op").innerHTML= Seconds +"seconds" ;
+            Seconds++;
+        }
+
+        function Start()
+        {
+            // ID=window.setTimeout(printMsg,5000);
+            ID=window.setInterval(printMsg,1000) ;
+        }
+        function Stop()
+        {
+            // window.clearTimeout(ID);
+            window.clearInterval(ID);
+        }
+
+
+    </script>
+</head>
+<body>
+    <button onclick="Start()" id="btnAdd">Start</button>
+
+    <h2 id="op" >Some Text</h2>
+
+    <button onclick="Stop()" id="btnstop" >Stop</button>
+</body>
+</html>

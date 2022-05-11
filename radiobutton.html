@@ -1,0 +1,28 @@
+<!-- RadioButton Program -->
+<html >
+<head>
+    
+    <script type="text/javascript">
+        function radioButton()
+        {
+            let rd1= document.getElementById("rd1");
+            let rd2=document.getElementById("rd2"); 
+
+            if(rd1.checked==true)
+                alert("The Male chategarie are selected.." +rd1.value);
+            else if(rd2.checked==true)  
+                alert("The Female chategarie are selected.." +rd2.value) ; 
+            else
+            alert("Nothing Are Selected..");    
+        }
+
+    </script>
+</head>
+<body>
+    <input type="radio" value="Male" name="grp1" id="rd1" >Male</input>
+    <br>
+    <input type="radio" value="Female" name="grp1" id="rd2" >Female</input>
+    <br>
+    <button id="btn1" onclick="radioButton()">Click Me</button>
+</body>
+</html>
