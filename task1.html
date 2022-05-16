@@ -1,0 +1,60 @@
+
+<!-- javascript basic program -->
+<html>
+<head>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+          
+    <link rel="stylesheet" href="task1.css"/>
+    <script type="text/javascript" src="task1.js"></script>    
+</head>
+<body>
+
+	<h1><center>REGISTRATION FORM</center></h1>
+	<hr>
+			<div class="employee-form">
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <div>
+                        <label>Full Name*</label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
+                        <input type="text" name="fullName" id="fullName">
+                    </div>
+                    <div>
+                        <label>Email Id</label>
+                        <input type="text" name="email" id="email">
+                    </div>
+                    <div>
+                        <label>Salary</label>
+                        <input type="text" name="salary" id="salary">
+                    </div>
+                    <div>
+                        <label>City</label>
+                        <select name="city" id="city">
+                            <option value="Mahuva" selected>Mahuva</option>
+                            <option  value="Bhavnagar">Bhavnagar</option>
+                            <option value="Surat">Surat</option>
+                            <option value="Rajkot">Rajkot</option>
+                            <option value="Mumbai">Mumbai</option>
+                        </select>
+                    </div>
+                    <div  class="form-action-buttons">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+		</div>
+		<br/>
+		<div class = "employees-table">
+                <table class="list" id="employeeList">
+                    <thead>
+                        <tr>
+                            <th>Full Name</th>
+                            <th>Email Id</th>
+                            <th>Salary</th>
+                            <th>City</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+
+
+</html>
