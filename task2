@@ -1,0 +1,5 @@
+Create Employee Form all the detals should be store in the localStorage and retrive the data in the list We can edit and delete that rows and search based on the Employee name and Salary.
+Employee Form
+add,edit,delete,list show, search by emp name and salary
+
+emp_id,emp_name,emp_salary, emp_city

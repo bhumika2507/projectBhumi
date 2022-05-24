@@ -1,3 +1,6 @@
+
+    
+   
 let selectedRow = null
 
 const onFormSubmit = () =>
@@ -25,6 +28,10 @@ const readFormData = () =>
 
 const insertNewRecord = (data) =>  
 {
+     const data1 =JSON.parse(localStorage.getItem("emp")) || [];
+
+    
+
     let table = document.getElementById("employeeList").getElementsByTagName('tbody')[0];
     let newRow = table.insertRow(table.length);
     cell1 = newRow.insertCell(0);
@@ -38,6 +45,9 @@ const insertNewRecord = (data) =>
     cell4 = newRow.insertCell(4);
     cell4.innerHTML = `<a onClick="onEdit(this)">Edit</a>
                        <a onClick="onDelete(this)">Delete</a>`;
+    data1.push(data);
+    localStorage.setItem("emp",JSON.stringify(data1));
+    return data1;
 }
 
 const resetForm = () =>
@@ -59,10 +69,17 @@ const onEdit = (td) =>
 }
 const updateRecord = (formData)  => 
 {
+    let existing = localStorage.getItem('myFavoriteSandwich');
+
     selectedRow.cells[0].innerHTML = formData.fullName;
     selectedRow.cells[1].innerHTML = formData.email;
     selectedRow.cells[2].innerHTML = formData.salary;
     selectedRow.cells[3].innerHTML = formData.city;
+
+      existing = existing ? existing.split(',') : [];
+      existing.push('tuna');
+      localStorage.setItem('myFavoriteSandwich', existing.toString());
+
 }
 
 const onDelete = (td) => 
@@ -72,6 +89,7 @@ const onDelete = (td) =>
         document.getElementById("employeeList").deleteRow(row.rowIndex);
         resetForm();
     }
+    localStorage.clear();
 }
 const validate =() => 
 {
@@ -86,3 +104,24 @@ const validate =() =>
     }
     return isValid;
 }
+
+// const myFunction = () =>
+//  {
+//     let  input, filter, table, tr, td, i, txtValue;
+//     input = document.getElementById("myInput");
+//     filter = input.value.toUpperCase();
+//     table = document.getElementById("employeeList");
+//     tr = table.getElementsByTagName("tr");
+//     for (i = 0; i < tr.length; i++) {
+//       td = tr[i].getElementsByTagName("td")[0];
+//       if (td) {
+//         txtValue = td.textContent || td.innerText;
+//         if (txtValue.toUpperCase().indexOf(filter) > -1) {
+//           tr[i].style.display = "";
+//         } else {
+//           tr[i].style.display = "none";
+//         }
+//       }       
+//     }
+//   }
+

@@ -1,0 +1,113 @@
+
+<!-- javascript basic program -->
+<html>
+<head>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+    <link  href="crud-operation.css" rel="stylesheet" />
+    <script src="crud-operation.js"></script>
+    <script type="text/javascript">
+
+(function(document) {
+    'use strict';
+
+    let TableFilter = (function(myArray) {
+        let  search_input;
+function _onInputSearch(e) {
+    search_input = e.target;
+    var tables = document.getElementsByClassName(search_input.getAttribute('data-table'));
+    myArray.forEach.call(tables, function(table) {
+        myArray.forEach.call(table.tBodies, function(tbody) {
+            myArray.forEach.call(tbody.rows, function(row) {
+                let text_content = row.textContent.toLowerCase();
+                let search_val = search_input.value.toLowerCase();
+                row.style.display = text_content.indexOf(search_val) > -1 ? '' : 'none';
+            });
+        });
+    });
+}
+
+return {
+    init: function() {
+        let inputs = document.getElementsByClassName('search-input');
+        myArray.forEach.call(inputs, function(input) {
+            input.oninput = _onInputSearch;
+        });
+    }
+};
+})(Array.prototype);
+
+document.addEventListener('readystatechange', function() {
+if (document.readyState === 'complete') {
+    TableFilter.init();
+}
+});
+
+})(document);
+
+    </Script>
+            
+
+
+    
+</head>
+<body>
+
+	<h1><center>REGISTRATION FORM</center></h1>
+	<hr>
+			<div class="employee-form">
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <div>
+                        <label>Full Name*</label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
+                        <input type="text" name="fullName" id="fullName">
+                    </div>
+                    <div>
+                        <label>Email Id</label>
+                        <input type="text" name="email" id="email">
+                    </div>
+                    <div>
+                        <label>Salary</label>
+                        <input type="text" name="salary" id="salary">
+                    </div>
+                    <div>
+                        <label>City</label>
+                        <select name="city" id="city">
+                            <option value="Mahuva" selected>Mahuva</option>
+                            <option  value="Bhavnagar">Bhavnagar</option>
+                            <option value="Surat">Surat</option>
+                            <option value="Rajkot">Rajkot</option>
+                            <option value="Mumbai">Mumbai</option>
+                        </select>
+                    </div>
+
+                    <div  >
+                        <center><input  type="submit" name="submit" id="btn"/></center>
+                        
+                </div>
+                    </form>
+                   
+
+               
+		</div>
+		<br/>
+		<div class = "employees-table">
+
+             <input type="search" placeholder="Search..." class="form-control search-input" data-table="customers-list"/> 
+                <table class="list customers-list" id="employeeList">
+                    <thead>
+                        <!-- <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search Yours names.." title="Type in a name">  -->
+
+                        
+                        <tr>
+                            <th>Full Name</th>
+                            <th>Email Id</th>
+                            <th>Salary</th>
+                            <th>City</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+
+
+</html>
