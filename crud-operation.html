@@ -14,7 +14,7 @@
         let  search_input;
 function _onInputSearch(e) {
     search_input = e.target;
-    var tables = document.getElementsByClassName(search_input.getAttribute('data-table'));
+  let tables = document.getElementsByClassName(search_input.getAttribute('data-table'));
     myArray.forEach.call(tables, function(table) {
         myArray.forEach.call(table.tBodies, function(tbody) {
             myArray.forEach.call(tbody.rows, function(row) {
@@ -45,17 +45,17 @@ if (document.readyState === 'complete') {
 })(document);
 
     </Script>
-            
-
-
-    
 </head>
-<body>
+<body onload="onloadData()";>
 
 	<h1><center>REGISTRATION FORM</center></h1>
 	<hr>
 			<div class="employee-form">
                 <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <div>
+                        <label>Id</label>
+                        <input type="text" name="id" id="id">
+                    </div>
                     <div>
                         <label>Full Name*</label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
                         <input type="text" name="fullName" id="fullName">
@@ -98,6 +98,7 @@ if (document.readyState === 'complete') {
 
                         
                         <tr>
+                            <th>Id</th>
                             <th>Full Name</th>
                             <th>Email Id</th>
                             <th>Salary</th>
