@@ -9,7 +9,10 @@
   "author": "bhumika",
   "license": "ISC",
   "dependencies": {
+    "@hapi/joi": "^15.0.3",
     "chalk": "^4.1.0",
+    "express": "^4.18.1",
+    "joi": "^17.6.0",
     "nodemon": "^2.0.16",
     "validator": "^13.7.0"
   }
